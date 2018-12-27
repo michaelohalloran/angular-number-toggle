@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button
+        class="btn btn-primary"
+        (click)="toggleNumType()"
+      >
+        {{text}}
+      </button>
+      <br><br>
+      <ul class="list-group" *ngIf="onlyOdd">
+        <li
+          class="list-group-item"
+          [ngClass]="{odd: onlyOdd}" 
+          *ngFor="let odd of odds"
+          [ngClass]
+        >
+          {{odd}}
+        </li>
+      </ul>
+      <ul class="list-group" *ngIf="!onlyOdd">
+        <li 
+          class="list-group-item"
+          [ngClass]="{even: !onlyOdd}"
+          *ngFor="let even of evens"
+        >
+          {{even}}
+        </li>
+      </ul>
+      <!-- <ng-template [ngIf]="onlyOdd">
+        <p>Only odd</p>
+      </ng-template> -->
+    </div>
+  </div>
+</div>
