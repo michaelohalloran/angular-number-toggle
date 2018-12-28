@@ -11,6 +11,7 @@ export class AppComponent {
   evens: number[] = this.numbers.filter(num => num%2 === 0);
   onlyOdd = false;
   text: string = 'Only show odd numbers';
+  value = 23;
 
   toggleNumType() {
     this.onlyOdd = !this.onlyOdd;
